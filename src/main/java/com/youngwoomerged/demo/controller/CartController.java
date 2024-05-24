@@ -46,7 +46,8 @@ public class CartController {
                 }).collect(Collectors.toList());
         return ResponseEntity.ok(cartItemDtos);
     }
-
+///해당 부분 추가
+    
     @GetMapping("shopping_list/{userId}")
     public ResponseEntity<List<CartItem>> getCartItemsByUserId(@PathVariable Integer userId) {
         List<CartItem> cartItems = cartService.getCartItemsByUserId(userId);
